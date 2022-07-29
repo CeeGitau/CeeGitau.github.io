@@ -1,0 +1,158 @@
+<html>
+<head>
+<title>Homepage</title>
+<style>
+<!--automatic slide navigation-->
+body{margin: 0; padding: 0; display: flex; align-items: center; justify-content: center; height: 100vh;}
+.slider { width: 100%; height: 500px; border-radius: 10px; overflow: hidden;}
+.slides { width: 500%; height: 500px; display: flex;}
+.slides input { display: none;}
+.slide { width: 20%; transition: 2s;}
+.slide img { width: 100%; height: 500px; }
+
+
+.navigation-manual { position: absolute; width: 800px; margin-top: -40px; display: flex; justify-content: center;}
+.manual-btn { border: 2px solid #40D3DC; padding: 5px; border-radius: 10px; cursor: pointer; transition: 1s;}
+.manual-btn:not(:last-child) { margin-right: 40px;}
+.manual-btn:hover { background: #40D3DC;}
+
+#radio1:checked ~ .first { margin-left: 0;}
+#radio2:checked ~ .first { margin-left: -20%;}
+#radio3:checked ~ .first { margin-left: -40%;}
+#radio4:checked ~ .first { margin-left: -60%;}
+
+.navigation-auto {position: absolute; display: flex; width: 800px; justify-content: center; margin-top: 460px;}
+.navigation-auto div {border: 2px solid #40D3DC; padding: 5px; border-radius: 10px; transition: 1s;}
+.navigation-auto div:not(:last-child) {margin-right: 40px;}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 { background: #40D3DC;}
+#radio2:checked ~ .navigation-auto .auto-btn2 { background: #40D3DC;}
+#radio3:checked ~ .navigation-auto .auto-btn3 { background: #40D3DC;}
+#radio4:checked ~ .navigation-auto .auto-btn4 { background: #40D3DC;}
+
+</style>
+</head>
+
+<body>
+
+<center><img src = "C:\Users\user\Desktop\HTML Project Photos\logo_2.jpg"></center> 
+<font = "5" face = "Georgia" color = "black">
+<h1 align = "center"><i>GETAWAY DELUXE</i></h1>
+</font>
+
+<h3><center> <a href = "C:\Users\user\Desktop\APT1040B Work\About Us.html">About Us </a>| 
+             <a href = "C:\Users\user\Desktop\APT1040B Work\index.html"> Our Hotels </a> | 
+             <a href = "C:\Users\user\Desktop\APT1040B Work\Booking Form.html"> Bookings </a></center></h3>
+<hr>
+
+<!--image slider start-->
+<div class = "slider">
+<div class = "slides">
+<input type = "radio" name = "radio-btn" id = "radio1">
+<input type = "radio" name = "radio-btn" id = "radio2">
+<input type = "radio" name = "radio-btn" id = "radio3">
+<input type = "radio" name = "radio-btn" id = "radio4">
+<!--image slider end-->
+
+<!--slide images start-->
+<div class = "slide first">
+<img src = 'C:\Users\user\Desktop\HTML Project Photos\hotel_pic4.jpg'>
+</div>
+<div class = "slide">
+<img src = 'C:\Users\user\Desktop\HTML Project Photos\hotel_pic5.jpg'>
+</div>
+<div class = "slide">
+<img src = 'C:\Users\user\Desktop\HTML Project Photos\hotel_pic6.jpg'>
+</div>
+<div class = "slide">
+<img src = 'C:\Users\user\Desktop\HTML Project Photos\hotel_pic7.jpg'>
+</div>
+<!--slide images end-->
+
+<!--automatic navigation start-->
+<div class = "navigation-auto">
+<div class = "auto-btn1"></div>
+<div class = "auto-btn2"></div>
+<div class = "auto-btn3"></div>
+<div class = "auto-btn4"></div>
+</div>
+<!--automatic navigation end-->
+</div>
+<!--manual navigation start-->
+<div class = "navigation-manual">
+<label for = "radio1" class = "manual-btn"></label>
+<label for = "radio2" class = "manual-btn"></label>
+<label for = "radio3" class = "manual-btn"></label>
+<label for = "radio4" class = "manual-btn"></label>
+</div>
+<!--manual navigation end-->
+</div>
+<!--image slider end-->
+
+<script type = "text/javascript">
+var counter = 1;
+setInterval(function()
+{
+document.getElementById("radio" + counter).checked = true;
+counter++;
+
+if(counter > 4)
+{counter = 1;}
+}, 5000);
+</script>
+
+<font = "5" face = "Cambria Math">
+<table>
+<tr>
+<td><img src = "C:\Users\user\Desktop\HTML Project Photos\hotel_pic1.gif"></td>
+<td align = "center"><h3>TRANQUIL<br>
+                         ENVIRONMENT</h3><br>
+    Whether you want to immerse yourself in the great blue liquid or simply<br> 
+    wish to enjoy a cold refreshing beverage outside, our pool area is the place to be!
+</td>
+</tr>
+
+<tr>
+<td align = "center"><h3>LUXURIOUS<br>
+                         ROOMS</h3><br>
+    We have a wide variety of rooms for you to choose from. You want an ocean view? You got it!<br> You like an indoor vibe? Done!
+    Among many more that we simply can't list them all. Not to mention excellent hotel room service.  
+</td>
+<td><img src = "C:\Users\user\Desktop\HTML Project Photos\hotel_pic2.gif"></td>
+</tr>
+
+<tr>
+<td><img src = "C:\Users\user\Desktop\HTML Project Photos\beach_pic.gif"></td>
+<td align = "center"><h3>SUMMER<br>
+                         VIBES</h3><br>
+    If you are a fun of the ocean, then you will definitely be a fan of our beach<br>
+    Who says it can't be summer everyday?
+</td>
+</tr>
+</table>
+</font>
+
+
+<table bgcolor = "gray" width = 100% height = 20%>
+<font = "3" color = "white">
+<tr>
+<td align = "center"><b>Contact Us | Getaway Deluxe | Bookings</b></td>
+</tr>
+
+<tr>
+<td align = "center"><b>Phone Number</b>: +254 790237488</td>
+</tr>
+
+<tr>
+<td align = "center"><b>Email</b>: centralreservations@getawayDeluxe.com</td>
+</tr>
+
+<tr>
+<td align = "center"> Kindly fill in this <a href = "C:\Users\user\Desktop\APT1040B Work\Hotel form.html">satisfactory form </a> to let us know your feedback on<br>
+                                                                                      the services offered by Getaway Deluxe </center>
+</font>
+</table>
+
+
+</body>
+</html>
